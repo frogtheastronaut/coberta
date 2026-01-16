@@ -17,8 +17,8 @@ data_config:
 
 training_config:
   batch_size: 32
-  epochs: 10
-  lr: 9e-4
+  epochs: 15
+  lr: 1e-3 # CHANGE FOR NEXT TEST 15/JAN
   log_interval: 10
   save_interval: 1
   seed: 42

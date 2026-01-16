@@ -2,14 +2,14 @@ import torch
 from transformers import AutoModelForMaskedLM, AutoTokenizer
 
 print("Loading model and tokenizer...")
-model = AutoModelForMaskedLM.from_pretrained("frogd51/coberta-base")
-tokenizer = AutoTokenizer.from_pretrained("frogd51/coberta-base")
+model = AutoModelForMaskedLM.from_pretrained("model")
+tokenizer = AutoTokenizer.from_pretrained("model")
 
 print(f"✓ Model loaded: {model.num_parameters():,} parameters")
 print(f"✓ Tokenizer vocab: {tokenizer.vocab_size}")
 
 # Test
-prompt = "If some aliens exist, and all aliens eat plants, then aliens who exist eat [MASK]."
+prompt = "A dog is a [MASK] animal."
 print(f"\nPrompt: {prompt}")
 
 inputs = tokenizer(prompt, return_tensors="pt")
